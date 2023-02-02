@@ -1,6 +1,6 @@
 import numpy as np
 from math import sqrt
-from random import random
+import random
 
 class RandomNumber:
     def __init__(self, p):
@@ -9,7 +9,7 @@ class RandomNumber:
         self.theoretical_var = p*(1-p)
 
     def flip(self):
-        rn_nb = random()
+        rn_nb = random.random()
         if rn_nb <= self.p:
             return 1
         else:
