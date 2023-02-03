@@ -1,4 +1,3 @@
-import numpy as np
 from random_number_manager import RandomNumberManager
 from random_number import RandomNumber
 
