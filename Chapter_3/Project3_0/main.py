@@ -1,10 +1,22 @@
+# ---------------------------- DESCRIPTION ------------------------------- #
+"""
+In this project, a random integer is chosen between 1 and nb_sides, its value is recorded, and
+the process is repeated nb_trials times. Then, the histogram (the number
+of times each integer occurred), is printed out, and the program tells you how
+many seconds the program took, and quits.
+"""
+
 from dice import Dice
 from clock import now
 
+print("This program can create a die with an arbitrary number of sides")
+nb_sides = int(input("How many sides do you want for your die? "))
+print("This program can also throw the die a number of times")
+nb_trials = int(input("How many trials do you want this program to carry out?"))
+
 t0 = now()
 
-dice = Dice(10000, 6)
-print(f"Number of trials: {dice.trials}")
+dice = Dice(nb_trials, nb_sides)
 dice.throw()
 dice.print_results()
 
