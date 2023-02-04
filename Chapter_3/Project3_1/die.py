@@ -2,7 +2,7 @@ import numpy as np
 import random as rd
 from prettytable import PrettyTable
 
-class Dice:
+class Die:
     def __init__(self, nb_trials, nb_sides):
         self.trials = nb_trials
         self.sides = nb_sides

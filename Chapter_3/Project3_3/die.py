@@ -3,7 +3,7 @@ from prettytable import PrettyTable
 import random as rd
 from numpy import zeros
 
-class Dice:
+class Die:
     def __init__(self, S, N):
         self.sides = S
         self.theoretical_mean = round((S+1)/2, 3)
@@ -19,7 +19,7 @@ class Dice:
     def roll(self):
         print(f"Number of sides = {self.sides}")
         print(f"Number of trials = {self.trials}")
-        print("Rolling dice...")
+        print("Rolling die...")
         for i in range(self.trials):
             random_side = rd.randint(0, self.sides - 1)
             self.histogram[random_side] += 1

@@ -6,7 +6,7 @@ of times each integer occurred), is printed out, and the program tells you how
 many seconds the program took, and quits.
 """
 
-from dice import Dice
+from die import Die
 from clock import now
 
 print("This program can create a die with an arbitrary number of sides")
@@ -16,9 +16,9 @@ nb_trials = int(input("How many trials do you want this program to carry out?"))
 
 t0 = now()
 
-dice = Dice(nb_trials, nb_sides)
-dice.throw()
-dice.print_results()
+die = Die(nb_trials, nb_sides)
+die.throw()
+die.print_results()
 
 t1 = now()
 print(f"Program time: {t1 - t0}")
